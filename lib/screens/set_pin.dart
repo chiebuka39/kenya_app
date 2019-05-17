@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kenya_app/screens/setup_pin.dart';
 import 'package:kenya_app/utils/my_colors.dart';
 import 'package:kenya_app/widgets/custom_button.dart';
 
@@ -45,7 +46,10 @@ class SetPinScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                 )),
             SizedBox(height: 90,),
-            CustomButton(width: size.width / 1.2, color: primaryColor, buttonText: 'SET YOUR PIN',)
+            InkWell(onTap: (){
+               Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => SetUpPinScreen()));
+            } ,child: CustomButton(width: size.width / 1.2, color: primaryColor, buttonText: 'SET YOUR PIN',))
           ],
         ),
       ),
