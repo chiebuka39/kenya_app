@@ -57,398 +57,404 @@ class _ReenterSetUpScreenState extends State<ReenterSetUpScreen> {
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: Column(
-        children: <Widget>[
-          SizedBox(height: 70),
-          Text("Please re-enter your Security pin"),
-          SizedBox(height: 20),
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: Container(),
-              ),
-              _firstPin == null
-                  ? Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 15,
-                        height: 15,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: primaryColor.withOpacity(0.5),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            SizedBox(height: 70),
+            Text("Please re-enter your Security pin"),
+            SizedBox(height: 5),
+            Container(
+              height: 100,
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Container(),
+                  ),
+                  _firstPin == null
+                      ? Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            width: 15,
+                            height: 15,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: primaryColor.withOpacity(0.5),
+                            ),
+                          ),
+                        )
+                      : Text(
+                          _firstPin.toString(),
+                          style: TextStyle(fontSize: 45, color: primaryColor),
                         ),
-                      ),
-                    )
-                  : Text(
-                      _firstPin.toString(),
-                      style: TextStyle(fontSize: 45, color: primaryColor),
-                    ),
-              _secondPin == null
-                  ? Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 15,
-                        height: 15,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: primaryColor.withOpacity(0.5),
+                  _secondPin == null
+                      ? Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            width: 15,
+                            height: 15,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: primaryColor.withOpacity(0.5),
+                            ),
+                          ),
+                        )
+                      : Text(
+                          _secondPin.toString(),
+                          style: TextStyle(fontSize: 45, color: primaryColor),
                         ),
-                      ),
-                    )
-                  : Text(
-                      _secondPin.toString(),
-                      style: TextStyle(fontSize: 45, color: primaryColor),
-                    ),
-              _thirdPin == null
-                  ? Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 15,
-                        height: 15,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: primaryColor.withOpacity(0.5),
+                  _thirdPin == null
+                      ? Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            width: 15,
+                            height: 15,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: primaryColor.withOpacity(0.5),
+                            ),
+                          ),
+                        )
+                      : Text(
+                          _thirdPin.toString(),
+                          style: TextStyle(fontSize: 45, color: primaryColor),
                         ),
-                      ),
-                    )
-                  : Text(
-                      _thirdPin.toString(),
-                      style: TextStyle(fontSize: 45, color: primaryColor),
-                    ),
-              _forthPin == null
-                  ? Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 15,
-                        height: 15,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: primaryColor.withOpacity(0.5),
+                  _forthPin == null
+                      ? Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            width: 15,
+                            height: 15,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: primaryColor.withOpacity(0.5),
+                            ),
+                          ),
+                        )
+                      : Text(
+                          _forthPin.toString(),
+                          style: TextStyle(fontSize: 45, color: primaryColor),
                         ),
-                      ),
-                    )
-                  : Text(
-                      _forthPin.toString(),
-                      style: TextStyle(fontSize: 45, color: primaryColor),
+                  Expanded(
+                    child: Container(),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Container(),
+                ),
+                RawMaterialButton(
+                  fillColor: Colors.white,
+                  elevation: pinElevation,
+                  highlightElevation: pinElevation,
+                  shape: CircleBorder(),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 62,
+                    height: 62,
+                    child: Text(
+                      '1',
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
                     ),
-              Expanded(
-                child: Container(),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 70,
-          ),
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: Container(),
-              ),
-              RawMaterialButton(
-                fillColor: Colors.white,
-                elevation: pinElevation,
-                highlightElevation: pinElevation,
-                shape: CircleBorder(),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 62,
-                  height: 62,
-                  child: Text(
-                    '1',
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
                   ),
-                ),
-                onPressed: () {
-                  
-                    _handleOnNumTap(1);
-                
-                  
-                },
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              RawMaterialButton(
-                fillColor: Colors.white,
-                elevation: pinElevation,
-                highlightElevation: pinElevation,
-                shape: CircleBorder(),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 62,
-                  height: 62,
-                  child: Text(
-                    '2',
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                onPressed: () {
-                  
-                  _handleOnNumTap(2);
-                },
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              RawMaterialButton(
-                fillColor: Colors.white,
-                elevation: pinElevation,
-                highlightElevation: pinElevation,
-                shape: CircleBorder(),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 62,
-                  height: 62,
-                  child: Text(
-                    '3',
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                onPressed: () {
-                  _handleOnNumTap(3);
-                },
-              ),
-              Expanded(
-                child: Container(),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: Container(),
-              ),
-              RawMaterialButton(
-                fillColor: Colors.white,
-                elevation: pinElevation,
-                highlightElevation: pinElevation,
-                shape: CircleBorder(),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 62,
-                  height: 62,
-                  child: Text(
-                    '4',
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                onPressed: () {
-                  _handleOnNumTap(4);
-                },
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              RawMaterialButton(
-                fillColor: Colors.white,
-                elevation: pinElevation,
-                highlightElevation: pinElevation,
-                shape: CircleBorder(),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 62,
-                  height: 62,
-                  child: Text(
-                    '5',
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                onPressed: () {
-                  _handleOnNumTap(5);
-                },
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              RawMaterialButton(
-                fillColor: Colors.white,
-                elevation: pinElevation,
-                highlightElevation: pinElevation,
-                shape: CircleBorder(),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 62,
-                  height: 62,
-                  child: Text(
-                    '6',
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                onPressed: () {
-                  _handleOnNumTap(6);
-                },
-              ),
-              Expanded(
-                child: Container(),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: Container(),
-              ),
-              RawMaterialButton(
-                fillColor: Colors.white,
-                elevation: pinElevation,
-                highlightElevation: pinElevation,
-                shape: CircleBorder(),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 62,
-                  height: 62,
-                  child: Text(
-                    '7',
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                onPressed: () {
-                  _handleOnNumTap(7);
-                },
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              RawMaterialButton(
-                fillColor: Colors.white,
-                elevation: pinElevation,
-                highlightElevation: pinElevation,
-                shape: CircleBorder(),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 62,
-                  height: 62,
-                  child: Text(
-                    '8',
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                onPressed: () {
-                  _handleOnNumTap(8);
-                },
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              RawMaterialButton(
-                fillColor: Colors.white,
-                elevation: pinElevation,
-                highlightElevation: pinElevation,
-                shape: CircleBorder(),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 62,
-                  height: 62,
-                  child: Text(
-                    '9',
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                onPressed: () {
-                  _handleOnNumTap(9);
-                },
-              ),
-              Expanded(
-                child: Container(),
-              ),
-            ],
-          ),
-          SizedBox(height: 20,),
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: Container(),
-              ),
-              
-              SizedBox(
-                width: 92,
-              ),
-              RawMaterialButton(
-                fillColor: Colors.white,
-                elevation: pinElevation,
-                highlightElevation: pinElevation,
-                shape: CircleBorder(),
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 62,
-                  height: 62,
-                  child: Text(
-                    '0',
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                onPressed: () {
-                  _handleOnNumTap(0);
-                },
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              RawMaterialButton(
+                  onPressed: () {
 
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 62,
-                  height: 62,
-                  child: Text(
-                    'clear',
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
-                  ),
+                      _handleOnNumTap(1);
+
+
+                  },
                 ),
-                onPressed: () {
-                  setState(() {
-                    _firstPin =null;
-                    _secondPin = null;
-                    _thirdPin = null;
-                    _forthPin = null;
-                  });
-                },
-              ),
-              Expanded(
-                child: Container(),
-              ),
-            ],
-          )
-        ],
+                SizedBox(
+                  width: 10,
+                ),
+                RawMaterialButton(
+                  fillColor: Colors.white,
+                  elevation: pinElevation,
+                  highlightElevation: pinElevation,
+                  shape: CircleBorder(),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 62,
+                    height: 62,
+                    child: Text(
+                      '2',
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  onPressed: () {
+
+                    _handleOnNumTap(2);
+                  },
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                RawMaterialButton(
+                  fillColor: Colors.white,
+                  elevation: pinElevation,
+                  highlightElevation: pinElevation,
+                  shape: CircleBorder(),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 62,
+                    height: 62,
+                    child: Text(
+                      '3',
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  onPressed: () {
+                    _handleOnNumTap(3);
+                  },
+                ),
+                Expanded(
+                  child: Container(),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Container(),
+                ),
+                RawMaterialButton(
+                  fillColor: Colors.white,
+                  elevation: pinElevation,
+                  highlightElevation: pinElevation,
+                  shape: CircleBorder(),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 62,
+                    height: 62,
+                    child: Text(
+                      '4',
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  onPressed: () {
+                    _handleOnNumTap(4);
+                  },
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                RawMaterialButton(
+                  fillColor: Colors.white,
+                  elevation: pinElevation,
+                  highlightElevation: pinElevation,
+                  shape: CircleBorder(),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 62,
+                    height: 62,
+                    child: Text(
+                      '5',
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  onPressed: () {
+                    _handleOnNumTap(5);
+                  },
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                RawMaterialButton(
+                  fillColor: Colors.white,
+                  elevation: pinElevation,
+                  highlightElevation: pinElevation,
+                  shape: CircleBorder(),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 62,
+                    height: 62,
+                    child: Text(
+                      '6',
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  onPressed: () {
+                    _handleOnNumTap(6);
+                  },
+                ),
+                Expanded(
+                  child: Container(),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Container(),
+                ),
+                RawMaterialButton(
+                  fillColor: Colors.white,
+                  elevation: pinElevation,
+                  highlightElevation: pinElevation,
+                  shape: CircleBorder(),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 62,
+                    height: 62,
+                    child: Text(
+                      '7',
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  onPressed: () {
+                    _handleOnNumTap(7);
+                  },
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                RawMaterialButton(
+                  fillColor: Colors.white,
+                  elevation: pinElevation,
+                  highlightElevation: pinElevation,
+                  shape: CircleBorder(),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 62,
+                    height: 62,
+                    child: Text(
+                      '8',
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  onPressed: () {
+                    _handleOnNumTap(8);
+                  },
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                RawMaterialButton(
+                  fillColor: Colors.white,
+                  elevation: pinElevation,
+                  highlightElevation: pinElevation,
+                  shape: CircleBorder(),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 62,
+                    height: 62,
+                    child: Text(
+                      '9',
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  onPressed: () {
+                    _handleOnNumTap(9);
+                  },
+                ),
+                Expanded(
+                  child: Container(),
+                ),
+              ],
+            ),
+            SizedBox(height: 20,),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Container(),
+                ),
+
+                SizedBox(
+                  width: 92,
+                ),
+                RawMaterialButton(
+                  fillColor: Colors.white,
+                  elevation: pinElevation,
+                  highlightElevation: pinElevation,
+                  shape: CircleBorder(),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 62,
+                    height: 62,
+                    child: Text(
+                      '0',
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  onPressed: () {
+                    _handleOnNumTap(0);
+                  },
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                RawMaterialButton(
+
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 62,
+                    height: 62,
+                    child: Text(
+                      'clear',
+                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _firstPin =null;
+                      _secondPin = null;
+                      _thirdPin = null;
+                      _forthPin = null;
+                    });
+                  },
+                ),
+                Expanded(
+                  child: Container(),
+                ),
+              ],
+            ),
+            SizedBox(height: 20,)
+          ],
+        ),
       ),
     );
   }

@@ -57,84 +57,87 @@ class _SetUpPinScreenState extends State<SetUpPinScreen> {
       body: Column(
         children: <Widget>[
           SizedBox(height: 70),
-          Text("Pleas enter your Security pin"),
-          SizedBox(height: 20),
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: Container(),
-              ),
-              _firstPin == null
-                  ? Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 15,
-                        height: 15,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: primaryColor.withOpacity(0.5),
+          Text("Please enter your Security pin"),
+          SizedBox(height: 5),
+          Container(
+            height: 100,
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: Container(),
+                ),
+                _firstPin == null
+                    ? Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 15,
+                          height: 15,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: primaryColor.withOpacity(0.5),
+                          ),
                         ),
+                      )
+                    : Text(
+                        _firstPin.toString(),
+                        style: TextStyle(fontSize: 45, color: primaryColor),
                       ),
-                    )
-                  : Text(
-                      _firstPin.toString(),
-                      style: TextStyle(fontSize: 45, color: primaryColor),
-                    ),
-              _secondPin == null
-                  ? Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 15,
-                        height: 15,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: primaryColor.withOpacity(0.5),
+                _secondPin == null
+                    ? Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 15,
+                          height: 15,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: primaryColor.withOpacity(0.5),
+                          ),
                         ),
+                      )
+                    : Text(
+                        _secondPin.toString(),
+                        style: TextStyle(fontSize: 45, color: primaryColor),
                       ),
-                    )
-                  : Text(
-                      _secondPin.toString(),
-                      style: TextStyle(fontSize: 45, color: primaryColor),
-                    ),
-              _thirdPin == null
-                  ? Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 15,
-                        height: 15,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: primaryColor.withOpacity(0.5),
+                _thirdPin == null
+                    ? Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 15,
+                          height: 15,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: primaryColor.withOpacity(0.5),
+                          ),
                         ),
+                      )
+                    : Text(
+                        _thirdPin.toString(),
+                        style: TextStyle(fontSize: 45, color: primaryColor),
                       ),
-                    )
-                  : Text(
-                      _thirdPin.toString(),
-                      style: TextStyle(fontSize: 45, color: primaryColor),
-                    ),
-              _forthPin == null
-                  ? Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 15,
-                        height: 15,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: primaryColor.withOpacity(0.5),
+                _forthPin == null
+                    ? Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 15,
+                          height: 15,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: primaryColor.withOpacity(0.5),
+                          ),
                         ),
+                      )
+                    : Text(
+                        _forthPin.toString(),
+                        style: TextStyle(fontSize: 45, color: primaryColor),
                       ),
-                    )
-                  : Text(
-                      _forthPin.toString(),
-                      style: TextStyle(fontSize: 45, color: primaryColor),
-                    ),
-              Expanded(
-                child: Container(),
-              ),
-            ],
+                Expanded(
+                  child: Container(),
+                ),
+              ],
+            ),
           ),
           SizedBox(
-            height: 70,
+            height: 20,
           ),
           Row(
             children: <Widget>[
