@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kenya_app/screens/dashboard.dart';
 import 'package:kenya_app/utils/my_colors.dart';
+import 'package:kenya_app/utils/my_dimensions.dart';
 
 class ReenterSetUpScreen extends StatefulWidget {
   @override
@@ -46,12 +47,13 @@ class _ReenterSetUpScreenState extends State<ReenterSetUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: setUpBgColor,
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text(
-          'Re-Enter Setup Pin',
+          'Confirm Pin',
           style: TextStyle(color: Colors.black),
         ),
       ),
@@ -144,8 +146,8 @@ class _ReenterSetUpScreenState extends State<ReenterSetUpScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -171,8 +173,8 @@ class _ReenterSetUpScreenState extends State<ReenterSetUpScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -196,8 +198,8 @@ class _ReenterSetUpScreenState extends State<ReenterSetUpScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -230,8 +232,8 @@ class _ReenterSetUpScreenState extends State<ReenterSetUpScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -254,8 +256,8 @@ class _ReenterSetUpScreenState extends State<ReenterSetUpScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -278,8 +280,8 @@ class _ReenterSetUpScreenState extends State<ReenterSetUpScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -312,8 +314,8 @@ class _ReenterSetUpScreenState extends State<ReenterSetUpScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -336,8 +338,8 @@ class _ReenterSetUpScreenState extends State<ReenterSetUpScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -360,8 +362,8 @@ class _ReenterSetUpScreenState extends State<ReenterSetUpScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -396,8 +398,8 @@ class _ReenterSetUpScreenState extends State<ReenterSetUpScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,

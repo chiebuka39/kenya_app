@@ -44,6 +44,7 @@ class _SetUpPinScreenState extends State<SetUpPinScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: setUpBgColor,
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Colors.transparent,

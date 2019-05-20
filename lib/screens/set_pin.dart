@@ -13,6 +13,7 @@ class SetPinScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: setUpBgColor,
       body: Center(
         child: Column(
           children: <Widget>[
