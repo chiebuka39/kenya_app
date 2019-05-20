@@ -163,7 +163,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         child: Container(),
                       ),
                       Material(
-                        elevation: 10,
+                        elevation: 6,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6.0)),
                         child: Container(
                           width: 170,
                           height: containerHeight,
@@ -241,7 +242,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         child: Container(),
                       ),
                       Material(
-                        elevation: 10,
+                        elevation: 6,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6.0)),
                         child: Container(
                           width: 170,
                           height: containerHeight,
@@ -330,7 +332,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         child: Container(),
                       ),
                       Material(
-                        elevation: 10,
+                        elevation: 6,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6.0)),
                         child: Container(
                           width: 170,
                           height: containerHeight,
@@ -409,7 +412,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         child: Container(),
                       ),
                       Material(
-                        elevation: 15,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6.0)),
+                        elevation: 6,
                         child: Container(
                           width: 170,
                           height: containerHeight,
