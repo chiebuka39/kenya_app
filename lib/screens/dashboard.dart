@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kenya_app/utils/my_colors.dart';
 import 'package:kenya_app/utils/my_dimensions.dart';
 import 'package:kenya_app/widgets/dots_indicator.dart';
@@ -178,8 +179,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Image.asset(
-                                            "assets/images/handcuffs.png",
+                                          child: SvgPicture.asset(
+                                            "assets/svg/handcuffs.svg",
                                           ),
                                         ),
                                       ],
@@ -257,8 +258,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Image.asset(
-                                            "assets/images/protect.png",
+                                          child: SvgPicture.asset(
+                                            "assets/svg/protect.svg",
                                           ),
                                         ),
                                       ],
@@ -347,8 +348,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Image.asset(
-                                            "assets/images/target.png",
+                                          child: SvgPicture.asset(
+                                            "assets/svg/target.svg",
                                           ),
                                         ),
                                       ],
@@ -427,8 +428,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Image.asset(
-                                            "assets/images/notebook-paper-todo.png",
+                                          child: SvgPicture.asset(
+                                            "assets/svg/notebook-paper-todo.svg",
                                           ),
                                         ),
                                       ],

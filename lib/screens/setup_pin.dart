@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kenya_app/screens/reenter_setup_pin.dart';
 import 'package:kenya_app/utils/my_colors.dart';
+import 'package:kenya_app/utils/my_dimensions.dart';
 
 class SetUpPinScreen extends StatefulWidget {
   @override
@@ -147,8 +148,8 @@ class _SetUpPinScreenState extends State<SetUpPinScreen> {
               RawMaterialButton(
                 splashColor: primaryColor,
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -175,8 +176,8 @@ class _SetUpPinScreenState extends State<SetUpPinScreen> {
               RawMaterialButton(
                 splashColor: primaryColor,
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -200,8 +201,8 @@ class _SetUpPinScreenState extends State<SetUpPinScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -235,8 +236,8 @@ class _SetUpPinScreenState extends State<SetUpPinScreen> {
               RawMaterialButton(
                 splashColor: primaryColor,
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -260,8 +261,8 @@ class _SetUpPinScreenState extends State<SetUpPinScreen> {
               RawMaterialButton(
                 splashColor: primaryColor,
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -285,8 +286,8 @@ class _SetUpPinScreenState extends State<SetUpPinScreen> {
               RawMaterialButton(
                 splashColor: primaryColor,
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -320,8 +321,8 @@ class _SetUpPinScreenState extends State<SetUpPinScreen> {
               RawMaterialButton(
                 fillColor: Colors.white,
                 splashColor: primaryColor,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -345,8 +346,8 @@ class _SetUpPinScreenState extends State<SetUpPinScreen> {
               RawMaterialButton(
                 splashColor: primaryColor,
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
@@ -369,8 +370,8 @@ class _SetUpPinScreenState extends State<SetUpPinScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
-                highlightElevation: 3,
+                elevation: pinElevation,
+                highlightElevation: pinElevation,
                 splashColor: primaryColor,
                 shape: CircleBorder(),
                 child: Container(
@@ -406,9 +407,9 @@ class _SetUpPinScreenState extends State<SetUpPinScreen> {
               ),
               RawMaterialButton(
                 fillColor: Colors.white,
-                elevation: 3,
+                elevation: pinElevation,
                 splashColor: primaryColor,
-                highlightElevation: 3,
+                highlightElevation: pinElevation,
                 shape: CircleBorder(),
                 child: Container(
                   alignment: Alignment.center,
