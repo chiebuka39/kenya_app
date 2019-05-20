@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kenya_app/utils/my_colors.dart';
+import 'package:kenya_app/utils/my_dimensions.dart';
 import 'package:kenya_app/widgets/dots_indicator.dart';
+import 'package:kenya_app/widgets/opaque_white_circle.dart';
 
 class DashboardScreen extends StatefulWidget {
   DashboardScreen({Key key}) : super(key: key);
@@ -24,7 +26,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
           Stack(
             children: <Widget>[
               Container(
-                color: primaryColor,
+
+                decoration: BoxDecoration(
+                  color: primaryColor,
+                    image: DecorationImage(
+                        image: ExactAssetImage(
+                            'assets/images/dash_bg_icons.png'))),
                 height: 250,
                 width: double.infinity,
                 child: Column(
@@ -41,7 +48,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           Column(
                             children: <Widget>[
                               Text(
-                                'Current fiene Collected',
+                                'Current fine Collected',
                                 style: TextStyle(
                                     fontSize: 15, color: Colors.white),
                               ),
@@ -140,7 +147,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
           SizedBox(
@@ -154,130 +161,159 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     Expanded(
                       child: Container(),
                     ),
-                    Container(
-                      width: 170,
-                      height: 160,
-                      child: Column(
-                        children: <Widget>[
-                          Row(
+                    Material(
+                      elevation: 10,
+                      child: Container(
+                        width: 170,
+                        height: containerHeight,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Stack(
                             children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Image.asset(
-                                  "assets/images/handcuffs.png",
-                                ),
+                              Column(
+                                children: <Widget>[
+                                  Row(
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Image.asset(
+                                          "assets/images/handcuffs.png",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 40,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: <Widget>[
+                                        Text(
+                                          'Charge Offender',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: <Widget>[
+                                        SizedBox(
+                                            width: 140,
+                                            child: Text(
+                                              'View and manage your insurance',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 10),
+                                              textAlign: TextAlign.end,
+                                            )),
+                                      ],
+                                    ),
+                                  )
+                                ],
                               ),
+                              OpaqueCircle()
                             ],
                           ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,8,0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                                Text(
-                                  'Charge Offender',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,8,0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                                SizedBox(
-                                    width: 150,
-                                    child: Text(
-                                      'View and manage your insurance',
-                                      style: TextStyle(color: Colors.white),
-                                      textAlign: TextAlign.end,
-                                    )),
-                              ],
-                            ),
-                          )
-                        ],
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6.0),
+                            gradient: LinearGradient(
+                                begin: Alignment.topRight,
+                                end: Alignment.bottomLeft,
+                                colors: <Color>[
+                                  Color(0xFFFF9350),
+                                  Color(0xFF3A7DEB)
+                                ])),
                       ),
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: <Color>[
-                            Color(0xFFFF9350),
-                            Color(0xFF3A7DEB)
-                          ])),
                     ),
                     Expanded(
                       child: Container(),
                     ),
-                    Container(
-                      width: 170,
-                      height: 160,
-                      child: Column(
-                        children: <Widget>[
-                          Row(
+                    Material(
+                      elevation: 10,
+                      child: Container(
+                        width: 170,
+                        height: containerHeight,
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Stack(
                             children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Image.asset(
-                                  "assets/images/protect.png",
-                                ),
+                              Column(
+                                children: <Widget>[
+                                  Row(
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Image.asset(
+                                          "assets/images/protect.png",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 50,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: <Widget>[
+                                        Text(
+                                          'Fine Payments',
+                                          style: TextStyle(
+                                              fontSize: containerMainText,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.fromLTRB(0, 0, 8, 0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: <Widget>[
+                                        SizedBox(
+                                            width: 150,
+                                            child: Text(
+                                              'View all fine payments',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: containerSubText),
+                                              textAlign: TextAlign.end,
+                                            )),
+                                      ],
+                                    ),
+                                  )
+                                ],
                               ),
+                              OpaqueCircle()
                             ],
                           ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,8,0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                                Text(
-                                  'Fine Payments',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0,0,8,0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                                SizedBox(
-                                    width: 150,
-                                    child: Text(
-                                      'View all fine payments',
-                                      style: TextStyle(color: Colors.white),
-                                      textAlign: TextAlign.end,
-                                    )),
-                              ],
-                            ),
-                          )
-                        ],
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6.0),
+                            gradient: LinearGradient(
+                                begin: Alignment.topRight,
+                                end: Alignment.bottomLeft,
+                                colors: <Color>[
+                                  Color(0xFF387CA3),
+                                  Color(0xFF5CC19E)
+                                ])),
                       ),
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: <Color>[
-                            Color(0xFF387CA3),
-                            Color(0xFF5CC19E)
-                          ])),
                     ),
                     Expanded(
                       child: Container(),
@@ -285,137 +321,167 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ],
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 Row(
                   children: <Widget>[
                     Expanded(
                       child: Container(),
                     ),
-                    Container(
-                      width: 170,
-                      height: 160,
-                      child: Column(
-                        children: <Widget>[
-                          Row(
+                    Material(
+                      elevation: 10,
+                      child: Container(
+                        width: 170,
+                        height: containerHeight,
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Stack(
                             children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Image.asset(
-                                  "assets/images/target.png",
-                                ),
+                              Column(
+                                children: <Widget>[
+                                  Row(
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Image.asset(
+                                          "assets/images/target.png",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: <Widget>[
+                                        Text(
+                                          'My Targets',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: containerMainText,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: <Widget>[
+                                        SizedBox(
+                                            width: 150,
+                                            child: Text(
+                                              'See all your targets for the months',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: containerSubText),
+                                              textAlign: TextAlign.end,
+                                            )),
+                                      ],
+                                    ),
+                                  )
+                                ],
                               ),
+                              OpaqueCircle()
                             ],
                           ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,8,0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                                Text(
-                                  'My Targets',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,8,0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                                SizedBox(
-                                    width: 150,
-                                    child: Text(
-                                      'See all your targets for the months',
-                                      style: TextStyle(color: Colors.white),
-                                      textAlign: TextAlign.end,
-                                    )),
-                              ],
-                            ),
-                          )
-                        ],
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6.0),
+                            gradient: LinearGradient(
+                                begin: Alignment.topRight,
+                                end: Alignment.bottomLeft,
+                                colors: <Color>[
+                                  Color(0xFF003399),
+                                  Color(0xFF3A7DEB)
+                                ])),
                       ),
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: <Color>[
-                            Color(0xFF003399),
-                            Color(0xFF3A7DEB)
-                          ])),
                     ),
                     Expanded(
                       child: Container(),
                     ),
-                    Container(
-                      width: 170,
-                      height: 160,
-                      child: Column(
-                        children: <Widget>[
-                          Row(
+                    Material(
+                      elevation: 15,
+                      child: Container(
+                        width: 170,
+                        height: containerHeight,
+                        child: Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Stack(
                             children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Image.asset(
-                                  "assets/images/notebook-paper-todo.png",
-                                ),
+                              Column(
+                                children: <Widget>[
+                                  Row(
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Image.asset(
+                                          "assets/images/notebook-paper-todo.png",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: <Widget>[
+                                        Text(
+                                          'Charge sheets',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: containerMainText,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: <Widget>[
+                                        SizedBox(
+                                            width: 150,
+                                            child: Text(
+                                              'View and manage your Charge sheets',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: containerSubText),
+                                              textAlign: TextAlign.end,
+                                            )),
+                                      ],
+                                    ),
+                                  )
+                                ],
                               ),
+                              OpaqueCircle()
                             ],
                           ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,8,0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                                Text(
-                                  'Charge sheets',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0,0,8,0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: <Widget>[
-                                SizedBox(
-                                    width: 150,
-                                    child: Text(
-                                      'View and manage your Charge sheets',
-                                      style: TextStyle(color: Colors.white),
-                                      textAlign: TextAlign.end,
-                                    )),
-                              ],
-                            ),
-                          )
-                        ],
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6.0),
+                            gradient: LinearGradient(
+                                begin: Alignment.topRight,
+                                end: Alignment.bottomLeft,
+                                colors: <Color>[
+                                  Color(0xFF507FFF),
+                                  Color(0xFF5E0099)
+                                ])),
                       ),
-                      decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: <Color>[
-                            Color(0xFF507FFF),
-                            Color(0xFF5E0099)
-                          ])),
                     ),
                     Expanded(
                       child: Container(),

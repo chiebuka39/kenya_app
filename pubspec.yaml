@@ -50,6 +50,7 @@ flutter:
     - assets/images/protect.png
     - assets/images/target.png
     - assets/images/notebook-paper-todo.png
+    - assets/images/dash_bg_icons.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
