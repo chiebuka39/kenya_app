@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kenya_app/screens/charge_offender.dart';
 import 'package:kenya_app/utils/my_colors.dart';
 import 'package:kenya_app/utils/my_dimensions.dart';
 import 'package:kenya_app/widgets/dots_indicator.dart';
@@ -163,80 +164,85 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       Expanded(
                         child: Container(),
                       ),
-                      Material(
-                        elevation: 6,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6.0)),
-                        child: Container(
-                          width: 170,
-                          height: containerHeight,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Stack(
-                              children: <Widget>[
-                                Column(
-                                  children: <Widget>[
-                                    Row(
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: SvgPicture.asset(
-                                            "assets/svg/handcuffs.svg",
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => ChargeOffenderScreen()));
+                        },
+                        child: Material(
+                          elevation: 6,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6.0)),
+                          child: Container(
+                            width: 170,
+                            height: containerHeight,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Stack(
+                                children: <Widget>[
+                                  Column(
+                                    children: <Widget>[
+                                      Row(
+                                        children: <Widget>[
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: SvgPicture.asset(
+                                              "assets/svg/handcuffs.svg",
+                                            ),
                                           ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 40,
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.end,
+                                          children: <Widget>[
+                                            Text(
+                                              'Charge Offender',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ],
                                         ),
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      height: 40,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.end,
-                                        children: <Widget>[
-                                          Text(
-                                            'Charge Offender',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                        ],
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.end,
-                                        children: <Widget>[
-                                          SizedBox(
-                                              width: 140,
-                                              child: Text(
-                                                'View and manage your insurance',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 10),
-                                                textAlign: TextAlign.end,
-                                              )),
-                                        ],
+                                      SizedBox(
+                                        height: 5,
                                       ),
-                                    )
-                                  ],
-                                ),
-                                OpaqueCircle()
-                              ],
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.end,
+                                          children: <Widget>[
+                                            SizedBox(
+                                                width: 140,
+                                                child: Text(
+                                                  'View and manage your insurance',
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 10),
+                                                  textAlign: TextAlign.end,
+                                                )),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                  OpaqueCircle()
+                                ],
+                              ),
                             ),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(6.0),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft,
+                                    colors: <Color>[
+                                      Color(0xFFFF9350),
+                                      Color(0xFF3A7DEB)
+                                    ])),
                           ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6.0),
-                              gradient: LinearGradient(
-                                  begin: Alignment.topRight,
-                                  end: Alignment.bottomLeft,
-                                  colors: <Color>[
-                                    Color(0xFFFF9350),
-                                    Color(0xFF3A7DEB)
-                                  ])),
                         ),
                       ),
                       Expanded(

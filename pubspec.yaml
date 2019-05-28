@@ -56,6 +56,7 @@ flutter:
     - assets/svg/target.svg
     - assets/svg/notebook-paper-todo.svg
     - assets/images/dash_bg_icons.png
+    - assets/images/kenya_person.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
