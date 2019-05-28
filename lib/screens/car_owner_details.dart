@@ -7,6 +7,12 @@ class CarOwnersDetails extends StatefulWidget {
 }
 
 class _CarOwnersDetailsState extends State<CarOwnersDetails> {
+
+  bool _first = false;
+  bool _second = true;
+  bool _third = false;
+  bool _forth = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,15 +120,21 @@ class _CarOwnersDetailsState extends State<CarOwnersDetails> {
                 ),
               ),
             ),
-            SizedBox(height: 50,),
+            SizedBox(
+              height: 50,
+            ),
             Container(
                 width: double.infinity,
                 height: 50,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(30)),
                 child: ButtonTheme(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
                   child: RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      _transactionBottomSheet(context);
+                    },
                     child: Text(
                       "Charge Offender",
                       style: TextStyle(color: Colors.white),
@@ -134,5 +146,195 @@ class _CarOwnersDetailsState extends State<CarOwnersDetails> {
         ),
       ),
     );
+  }
+
+  void _transactionBottomSheet(context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (BuildContext bc) {
+          return Container(
+              height: 400,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20))),
+              child: Column(children: <Widget>[
+                SizedBox(
+                  height: 30,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    height: 70,
+
+                    child: Column(
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text("Obstruction", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),),
+                                RichText(
+                                  text: TextSpan(children: [
+                                    TextSpan(
+                                        text: "ksh",
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 8)),
+                                    TextSpan(
+                                        text: "5,000",
+                                        style: TextStyle(color: Colors.black))
+                                  ]),
+                                )
+                              ],
+                            ),
+                            Checkbox(value: _first, onChanged: (bool value) {
+                              setState(() {
+                                _first = !_first;
+                              });
+                            },)
+                          ],
+                        ),
+                        SizedBox(height: 20,),
+                        Container(height: 1,width: double.infinity,color: Colors.grey,)
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    height: 70,
+
+                    child: Column(
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text("Overspeeding", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),),
+                                RichText(
+                                  text: TextSpan(children: [
+                                    TextSpan(
+                                        text: "ksh",
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 8)),
+                                    TextSpan(
+                                        text: "5,000",
+                                        style: TextStyle(color: Colors.black))
+                                  ]),
+                                )
+                              ],
+                            ),
+                            Checkbox(value: _second, onChanged: (bool value) {
+                              setState(() {
+                                _second = !_second;
+                              });
+                            },)
+                          ],
+                        ),
+                        SizedBox(height: 20,),
+                        Container(height: 1,width: double.infinity,color: Colors.grey,)
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    height: 70,
+
+                    child: Column(
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text("No Drivers License", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),),
+                                RichText(
+                                  text: TextSpan(children: [
+                                    TextSpan(
+                                        text: "ksh",
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 8)),
+                                    TextSpan(
+                                        text: "5,000",
+                                        style: TextStyle(color: Colors.black))
+                                  ]),
+                                )
+                              ],
+                            ),
+                            Checkbox(value: _third, onChanged: (bool value) {
+                              setState(() {
+                                _third = !_third;
+                              });
+                            },)
+                          ],
+                        ),
+                        SizedBox(height: 20,),
+                        Container(height: 1,width: double.infinity,color: Colors.grey,)
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    height: 70,
+
+                    child: Column(
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text("Driving While Using Phone", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),),
+                                RichText(
+                                  text: TextSpan(children: [
+                                    TextSpan(
+                                        text: "ksh",
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 8)),
+                                    TextSpan(
+                                        text: "3,000",
+                                        style: TextStyle(color: Colors.black))
+                                  ]),
+                                )
+                              ],
+                            ),
+                            Checkbox(value: _forth, onChanged: (bool value) {
+                              setState(() {
+                                _forth = !_forth;
+                              });
+                            },)
+                          ],
+                        ),
+                        SizedBox(height: 20,),
+                        Container(height: 1,width: double.infinity,color: Colors.grey,)
+                      ],
+                    ),
+                  ),
+                )
+
+              ]));
+        });
   }
 }
